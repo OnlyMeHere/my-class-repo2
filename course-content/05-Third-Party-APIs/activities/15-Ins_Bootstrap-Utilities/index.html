@@ -8,45 +8,48 @@
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
-  <title>Bootstrap Layouts</title>
+  <title>Bootstrap Utilities</title>
 </head>
 
 <body>
-  <header class="jumbotron jumbotron-fluid">
+  <!-- Bootstrap uses color utility classes to set colors for text and background colors -->
+  <header class="jumbotron jumbotron-fluid bg-dark text-light">
     <div class="container">
-      <!-- Add classes for a row and align items to the bottom -->
-      <div class="row">
-        <!-- Add classes to create a column that spans full width on mobile and half width on larger screens -->
-        <div class="col-md-6">
-          <img class="img-fluid" src="https://via.placeholder.com/1920x1080" alt="video placeholder" />
+      <!-- Use align-items utilities on flexbox containers to align to start, end, center, baseline, or stretch https://getbootstrap.com/docs/4.0/utilities/flex/#align-items-->
+      <div class="row align-items-end">
+        <div class="col-12 col-md-6">
+          <img class='img-fluid' src="https://via.placeholder.com/1920x1080" alt="video placeholder" />
         </div>
-        <!-- Add classes to create a column that spans full width on mobile and half width on larger screens -->
-        <div class="col-md-6">
+
+        <div class="col-12 col-md-6">
           <h1>Welcome to the app.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, reprehenderit! Placeat quo
             necessitatibus porro corporis quasi architecto sit aspernatur inventore, perspiciatis nulla hic soluta ipsum
             ipsa sed iure dolorum! Tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatem
             dolorum earum esse recusandae facere aliquam. Excepturi facilis sint nesciunt ipsa, eveniet facere in quidem
             voluptas exercitationem distinctio commodi laborum!</p>
+            <!--  -->
           <button class="btn btn-primary">Learn more.</button>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="container my-3">
-    <!-- Add a class to create a row -->
-    <section class="row">
-      <!-- Add classes to create a column that spans full width on smaller screens and 3/4 on larger screens -->
-      <div class="col-sm-12 col-md-9">
+  <main class="container">
+    <!-- Bootstrap spacing utilities use m- for margin and p- for padding -->
+    <!-- 4 - (by default) for classes that set the margin or padding to $spacer * 1.5 -->
+     <!-- The default value of $spacer is 1rem, i.e 16 pixels https://github.com/twbs/bootstrap/blob/99379f3843ddd5bd66ce6559ab91ef68c744fbd7/scss/_variables.scss#L118 -->
+    <section class="row my-4">
+      <div class="col-12 col-md-9">
         <h2>Our Services</h2>
+        <!-- Use justify-content utilities to change alignment of flex items on the main axis -->
+        <!-- https://getbootstrap.com/docs/4.0/utilities/flex/#justify-content -->
+        <section class="row justify-content-around">
 
-        <!-- Add classes to create a row with content having space around it -->
-        <section class="row">
-          <!-- Add classes to create a column that spans full width on mobile, half width on medium screens, and 1/3 on larger screens -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-12 col-sm-6 col-lg-4 mb-3">
             <div class="card">
-              <h3 class="card-header">
+              <!-- Bootstrap colors https://getbootstrap.com/docs/4.0/utilities/colors/#background-color -->
+              <h3 class="card-header bg-info">
                 Service 1
               </h3>
               <div class="card-body">
@@ -60,10 +63,9 @@
               </div>
             </div>
           </div>
-          <!-- Add classes to create a column that spans full width on mobile, half width on medium screens, and 1/3 on larger screens -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-12 col-sm-6 col-lg-4 mb-3">
             <div class="card">
-              <h3 class="card-header">
+              <h3 class="card-header bg-success">
                 Service 2
               </h3>
               <div class="card-body">
@@ -77,10 +79,9 @@
               </div>
             </div>
           </div>
-          <!-- Add classes to create a column that spans full width on mobile, half width on medium screens, and 1/3 on larger screens -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-12 col-sm-6 col-lg-4 mb-3">
             <div class="card">
-              <h3 class="card-header">
+              <h3 class="card-header bg-warning">
                 Service 3
               </h3>
               <div class="card-body">
@@ -96,9 +97,7 @@
           </div>
         </section>
       </div>
-
-      <!-- Add classes to create a column that spans full width on mobile and 1/4 on larger screens -->
-      <div class="col-sm-12 col-md-3">
+      <div class="col-12 col-md-3">
         <h2>About Us</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. A deleniti illo amet veniam. Enim dignissimos sint,
@@ -112,10 +111,8 @@
 
     <hr />
 
-    <!-- Add classes to create a center-justified row -->
-    <section class="row justify-content-md-center">
-      <!-- Add classes to create a column that spans full width on mobile, half width on medium screens, and only 1/3 on larger screens -->
-      <div class="col-sm-12 col-md-6 col-lg-4">
+    <section class="row justify-content-center my-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <address>
           <h2>Cool Company, Inc.</h2>
 
@@ -129,8 +126,7 @@
 
         </address>
       </div>
-      <!-- Add classes to create a column that spans full width on mobile, half width on medium screens, and only 1/3 on larger screens -->
-      <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <h2>Leave a Comment</h2>
         <form>
           <div class="form-group">
