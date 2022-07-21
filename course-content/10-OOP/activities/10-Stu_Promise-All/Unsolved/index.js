@@ -5,6 +5,14 @@ const callAPI = (duration) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       // TODO: If the duration is longer than maxDuration, reject() the promise
+      
+      if (duration < 0) {
+        reject(new Error("This request timed out"));
+      }
+      else if (duration >= maxDuration) {
+        reject(new Error("This request timed out"));
+      }
+      resolve;
       // TODO: Otherwise resolve() the promise
     }, duration);
   });
