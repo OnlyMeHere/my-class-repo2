@@ -24,7 +24,7 @@ const db = mysql.createConnection(
 
 
 // POST 
-// http://localhost:3001//api/new-movie
+// http://localhost:3001/api/new-movie
 
 // {"movie_name": "Moana"}
 // Create a movie
