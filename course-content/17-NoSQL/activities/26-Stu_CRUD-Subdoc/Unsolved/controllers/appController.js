@@ -16,6 +16,9 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // TODO: Add comments to the functionality of the createApplication method
+  // this takes the user input to create a new application with the name for user input
+  // that appliction is the added to the set os application.
+  // if not the user then throw error 404
   createApplication(req, res) {
     Application.create(req.body)
       .then((application) => {
@@ -38,6 +41,8 @@ module.exports = {
       });
   },
   // TODO: Add comments to the functionality of the updateApplication method
+  // finds one and updates the _id to the req.params.applicationId
+  // sets that value to the req.body and runs validation and sets new value to true
   updateApplication(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
